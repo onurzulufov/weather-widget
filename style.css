@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #83a4d4, #b6fbff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-widget {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#weatherInfo {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+#weatherInfo.show {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px 0 0 12px;
+  font-size: 16px;
+  outline: none;
+  background: #f2f2f2;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+  background: #005fcc;
+}
+
+.weather-main img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.city-name {
+  font-size: 30px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.detail {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 12px;
+  width: 48%;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.detail span:first-child {
+  display: block;
+  font-size: 17px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.detail span:last-child {
+  font-weight: bold;
+  color: #333;
+  font-size: 17px;
+}
+
+#error {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.error {
+  color: red;
+}
+
+.info {
+  color: #000;
+}

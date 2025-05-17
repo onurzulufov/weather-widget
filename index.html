@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Виджет Погоды</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="weather-widget">
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Введите город..." />
+      <button id="searchBtn">🔍</button>
+    </div>
+    <div id="error"></div>
+    <div id="weatherInfo">
+      <div class="weather-main">
+        <div id="cityName" class="city-name">Тараз</div>
+        <img id="weatherIcon" src="./images/Clear.svg" alt="Иконка погоды" />
+        <div id="temperature" class="temperature">30°C</div>
+      </div>
+      <div class="weather-details">
+        <div class="detail">
+          <span>💨 Ветер</span>
+          <span id="wind">5 м/с</span>
+        </div>
+        <div class="detail">
+          <span>💧 Влажность</span>
+          <span id="humidity">10%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
