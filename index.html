@@ -10,32 +10,46 @@
 
 <body>
 
-  <div class="weather-widget">
-    <div class="search-box">
-      <input type="text" id="cityInput" placeholder="Введите город..." />
-      <button id="searchBtn">🔍</button>
-    </div>
-    <div id="error"></div>
-    <div id="weatherInfo">
-      <div class="weather-main">
-        <div id="cityName" class="city-name">Тараз</div>
-        <img id="weatherIcon" src="./images/Clear.svg" alt="Иконка погоды" />
-        <div id="temperature" class="temperature">30°C</div>
-      </div>
-      <div class="weather-details">
-        <div class="detail">
-          <span>💨 Ветер</span>
-          <span id="wind">5 м/с</span>
-        </div>
-        <div class="detail">
-          <span>💧 Влажность</span>
-          <span id="humidity">10%</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<main class="weather-widget">
+  <section class="search-box" aria-label="Поиск города">
+    <input
+      type="text"
+      id="cityInput"
+      placeholder="Введите город..."
+      aria-label="Введите название города"
+    />
+    <button id="searchBtn" aria-label="Поиск">🔍</button>
+  </section>
 
-  <script src="script.js"></script>
+  <section id="error" role="alert"></section>
+
+  <section id="weatherInfo" aria-live="polite">
+    <div class="weather-main">
+      <h1 id="cityName" class="city-name">Тараз</h1>
+      <img
+        id="weatherIcon"
+        src="./images/Clear.svg"
+        alt="Ясно"
+        width="64"
+        height="64"
+      />
+      <div id="temperature" class="temperature">30°C</div>
+    </div>
+
+    <div class="weather-details">
+      <div class="detail">
+        <span>💨 Ветер</span>
+        <span id="wind">5 м/с</span>
+      </div>
+      <div class="detail">
+        <span>💧 Влажность</span>
+        <span id="humidity">10%</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
 </body>
 
 </html>
