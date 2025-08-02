@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&family=Roboto:wght@400;600&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -91,6 +91,7 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  flex-wrap: wrap; 
 }
 
 .widget__detail {
@@ -99,6 +100,7 @@ body {
   border-radius: 12px;
   width: 48%;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  min-width: 120px;
 }
 
 .widget__detail-label {
@@ -130,4 +132,20 @@ body {
 
 .info {
   color: #000;
+}
+
+@media (max-width: 360px) {
+  .widget {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .widget__detail {
+    width: 100%;
+  }
+
+  .widget__detail-label {
+    font-size: 15px; 
+    white-space: normal; 
+  }
 }
